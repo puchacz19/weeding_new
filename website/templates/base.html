@@ -1,0 +1,610 @@
+{% load static %}
+
+{% url 'home' as path_to_home %}
+{% url 'story' as path_to_story %}
+{% url 'gallery' as path_to_gallery %}
+{% url 'services' as path_to_services %}
+{% url 'contact' as path_to_contact %}
+{% url 'tables' as path_to_tables %}
+{% url 'location' as path_to_location %}
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Wedding &mdash; 100% Free Fully Responsive HTML5 Template by FREEHTML5.co</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
+	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+	<meta name="author" content="FREEHTML5.CO" />
+
+  <!--
+	//////////////////////////////////////////////////////
+
+	FREE HTML5 TEMPLATE
+	DESIGNED & DEVELOPED by FREEHTML5.CO
+
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
+
+	//////////////////////////////////////////////////////
+	 -->
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{% static 'website/css/animate.css' %}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{% static 'website/css/icomoon.css' %}">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{% static 'website/css/bootstrap.css' %}">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="{% static 'website/css/magnific-popup.css' %}">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="{% static 'website/css/owl.carousel.min.css' %}">
+	<link rel="stylesheet" href="{% static 'website/css/owl.theme.default.min.css' %}">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="{% static 'website/css/style.css' %}">
+
+	<!-- Modernizr JS -->
+	<script src="{% static 'website/js/modernizr-2.6.2.min.js' %}"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="{% static 'website/js/respond.min.js' %}"></script>
+	<![endif]-->
+
+	</head>
+	<body id="myPage">
+
+	<div class="fh5co-loader"></div>
+
+	<div>
+	<nav class="fh5co-nav fixed-top" role="navigation">
+		<div class="container bg-secondary">
+			<div class="row">
+				<div class="col-xs-2">
+					<div id="fh5co-logo"><a href="{% url 'home' %}">Wedding<strong>.</strong></a></div>
+				</div>
+				<div class="col-xs-10 text-right menu-1">
+					<ul>
+                        <li><a href="#ceremony">Ceremonia</a></li>
+                        <li><a href="#fh5co-couple-story">Nasza Historia</a></li>
+                        <li><a href="#gallery">Galeria</a></li>
+                        <li><a href="#location">Lokalizacja</a></li>
+                        <li><a href="#presence">Dołącz!</a></li>
+						<li><a href="#contact">Kontakt</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</nav>
+
+    <header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image: url({% static 'website/images/tyniec.jpg' %}); " data-stellar-background-ratio="0.5">
+		<!--<div class="overlay"></div> -->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<div class="display-t">
+						<div class="display-tc animate-box" data-animate-effect="fadeIn">
+							<h1>Kamila &amp; Piotr</h1>
+							<h2>We Are Getting Married</h2>
+							<div class="simply-countdown simply-countdown-one"></div>
+							<!--<p><a href="#" class="btn btn-default btn-sm">Save the date</a></p>-->
+						</div>
+					</div>
+				</div>
+			</div>
+		<!--</div> -->
+	</header>
+        {% if first_name %}
+        <center>
+            <h2>Thanks {{ first_name }}!</h2>
+            <p>We received your email and will respond shortly!!!</p>
+        </center>
+        <br>
+        {% else %}
+	<div id="wedding">
+		<div class="container">
+			<div class="row slideanim">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+					<h2>Hello!</h2>
+					<h3>17 Lipiec, 2021 Kraków, Polska</h3>
+					<p>We invited you to celebrate our wedding</p>
+				</div>
+			</div>
+			<div class="couple-wrap animate-box">
+				<div class="couple-half">
+					<div class="groom">
+						<img src="{% static 'website/images/piotr.jpg' %}" alt="groom" class="img-responsive">
+					</div>
+					<div class="desc-groom">
+						<h3>Piotr Puchala</h3>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove</p>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove</p>
+                    </div>
+				</div>
+				<p class="heart text-center"><i class="icon-heart2"></i></p>
+				<div class="couple-half">
+					<div class="bride">
+						<img src="{% static 'website/images/kamila.jpg' %}" alt="groom" class="img-responsive">
+					</div>
+					<div class="desc-bride">
+						<h3>Kamila Bozek</h3>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove</p>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove</p>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <div id="ceremony">
+        <div id="fh5co-event" class="fh5co-bg" style="background-image:url("{% static 'website/images/img_bg_3.jpg);' %}")>
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row slideanim">
+                    <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+                        <span>Our Special Events</span>
+                        <h2>Wedding Events</h2>
+                    </div>
+                </div>
+                <div class="row slideanim">
+                    <div class="display-t">
+                        <div class="display-tc">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="col-md-6 col-sm-6 text-center">
+                                    <div class="event-wrap animate-box">
+                                        <h3>Main Ceremony</h3>
+                                        <div class="event-col">
+                                            <i class="icon-clock"></i>
+                                            <span>14:00 PM</span>
+                                            <span>15:00 PM</span>
+                                        </div>
+                                        <div class="event-col">
+                                            <i class="icon-calendar"></i>
+                                            <span>Saturday 17</span>
+                                            <span>July, 2021</span>
+                                        </div>
+                                        <p>Na ceremonię ślubną zapraszamy do kościoła Św. Kogoś tam w Krakowie.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 text-center">
+                                    <div class="event-wrap animate-box">
+                                        <h3>Wedding Party</h3>
+                                        <div class="event-col">
+                                            <i class="icon-clock"></i>
+                                            <span>15:30 PM</span>
+                                            <span>7:00 AM</span>
+                                        </div>
+                                        <div class="event-col">
+                                            <i class="icon-calendar"></i>
+                                            <span>Saturday 17</span>
+                                            <span>July, 2021</span>
+                                        </div>
+                                        <p>Ta cudowna uroczystość odbędzie się w hotelu Junior w Krakowie.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+
+
+        <div id="fh5co-couple-story">
+            <div class="container">
+                <div class="row slideanim">
+                    <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+                        <span>We Love Each Other</span>
+                        <h2>Our Story</h2>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    </div>
+                </div>
+                <div class="row slideanim">
+                    <div class="col-md-12 col-md-offset-0">
+                        <ul class="timeline animate-box">
+                            <li class="animate-box">
+                                <div class="timeline-badge" style="background-image: url({% static 'website/images/Snapchat.jpg' %}); "></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title">First We Meet</h3>
+                                        <span class="date">December 25, 2015</span>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted animate-box">
+                                <div class="timeline-badge" style="background-image: url({% static 'website/images/zdj.jpeg' %}); "></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title">First Date</h3>
+                                        <span class="date">December 28, 2015</span>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="animate-box">
+                                <div class="timeline-badge" style="background-image: url({% static 'website/images/zdj1.JPG' %}); "></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title">In A Relationship</h3>
+                                        <span class="date">January 1, 2016</span>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    <div id="gallery">
+        <div id="fh5co-gallery" class="fh5co-section-gray">
+            <div class="container">
+                <div class="row slideanim">
+                    <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+                        <span>Our Memories</span>
+                        <h2>Wedding Gallery</h2>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    </div>
+                </div>
+                <div class="row row-bottom-padded-md">
+                    <div class="col-md-12">
+                        <ul id="fh5co-gallery-list">
+                            <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url({% static 'website/images/piotr.jpg' %}); ">
+                            <a href="https://www.facebook.com/FamilyFotoFactory/photos/?ref=page_internal" target="_blank">
+                                <div class="case-studies-summary">
+                                    <span>14 Photos</span>
+                                    <h2>Two Glas of Juice</h2>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-2.jpg); ">
+                            <a href="{% static 'website/images/piotr.jpg' %}" class="color-2">
+                                <div class="case-studies-summary">
+                                    <span>30 Photos</span>
+                                    <h2>Timer starts now!</h2>
+                                </div>
+                            </a>
+                        </li>
+
+
+                        <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-3.jpg); ">
+                            <a href="#" class="color-3">
+                                <div class="case-studies-summary">
+                                    <span>90 Photos</span>
+                                    <h2>Beautiful sunset</h2>
+                                </div>
+                            </a>
+                        </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+
+
+<!--
+	<div id="fh5co-testimonial">
+		<div class="container">
+			<div class="row">
+				<div class="row animate-box">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+						<span>Best Wishes</span>
+						<h2>Friends Wishes</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 animate-box">
+						<div class="wrap-testimony">
+							<div class="owl-carousel-fullwidth">
+								<div class="item">
+									<div class="testimony-slide active text-center">
+										<figure>
+											<img src="{% static 'website/images/couple-1.jpg' %}" alt="user">
+										</figure>
+										<span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
+										<blockquote>
+											<p>"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics"</p>
+										</blockquote>
+									</div>
+								</div>
+								<div class="item">
+									<div class="testimony-slide active text-center">
+										<figure>
+											<img src="{% static 'website/images/couple-2.jpg' %}" alt="user">
+										</figure>
+										<span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
+										<blockquote>
+											<p>"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, at the coast of the Semantics, a large language ocean."</p>
+										</blockquote>
+									</div>
+								</div>
+								<div class="item">
+									<div class="testimony-slide active text-center">
+										<figure>
+											<img src="{% static 'website/images/couple-3.jpg' %}" alt="user">
+										</figure>
+										<span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
+										<blockquote>
+											<p>"Far far away, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean."</p>
+										</blockquote>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+-->
+    <div id="location">
+        <div class="fh5co-section">
+            <div class="container">
+                <div class="row slideanim">
+                    <div class="text-center fh5co-heading ">
+                        <h2>Lokalizacja</h2>
+                        <div class="col-12">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10258.357284139083!2d19.85318936740129!3d50.00030856680353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165db1da5df2e5%3A0x3c76233a5334e27c!2sHotel%20Junior!5e0!3m2!1spl!2spl!4v1609241826914!5m2!1spl!2spl" width="100%" height="550" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="presence">
+        <div id="fh5co-started" class="fh5co-bg" style="background-image:url(images/img_bg_4.jpg);">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row animate-box slideanim">
+                    <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                        <h2>Are You Attending?</h2>
+                        <p>Please Fill-up the form to notify you that you're attending. Thanks.</p>
+                    </div>
+                </div>
+                <div class="row animate-box slideanim">
+                    <div class="col-md-10 col-md-offset-1">
+                        <form class="form-inline">
+                            <div class="col-md-4 col-sm-4">
+                                <div class="form-group">
+                                    <label for="name" class="sr-only">Name</label>
+                                    <input type="name" class="form-control" id="name" placeholder="Name & Surname">
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <div class="form-group">
+                                    <label for="email" class="sr-only">Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <div class="form-group">
+                                    <label for="number" class="sr-only">Amount of people</label>
+                                    <input type="number" class="form-control" id="number" placeholder="Amount of people">
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <br>
+                            <center>
+                                <div class="col-md-12 col-sm-12">
+                                    <button type="submit" class="btn btn-default btn-block">I am Attending</button>
+                                </div>
+                            </center>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="fh5co-section" style="background-image:url(images/img_bg_4.jpg);">
+            <div class="container">
+                <div class="row slideanim">
+                    <div class="col-md-6 col-md-push-6 animate-box">
+                        <h3>Get In Touch</h3>
+                        <form action="{% url 'contact' %}" method="POST">
+                            {% csrf_token %}
+                            <div class="row form-group">
+                                <div class="col-md-6">
+                                    <label for="fname">First Name</label>
+                                    <input type="text" name="first_name" id="fname" class="form-control" placeholder="Your firstname">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="lname">Last Name</label>
+                                    <input type="text" name="last_name" id="lname" class="form-control" placeholder="Your lastname">
+                                </div>
+                            </div>
+
+                            <div class="row form-group">
+                                <div class="col-md-12">
+                                    <label for="email">Email</label>
+                                    <input type="text" name="email" id="email" class="form-control" placeholder="Your email address">
+                                </div>
+                            </div>
+
+                            <div class="row form-group">
+                                <div class="col-md-12">
+                                    <label for="subject">Subject</label>
+                                    <input type="text" name="subject" id="subject" class="form-control" placeholder="Your subject of this message">
+                                </div>
+                            </div>
+
+                            <div class="row form-group">
+                                <div class="col-md-12">
+                                    <label for="message">Message</label>
+                                    <textarea name="message" name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Write us something"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Send Message" class="btn btn-primary">
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="col-md-5 col-md-pull-5 animate-box">
+
+                        <div class="fh5co-contact-info">
+                            <h3>Contact Information</h3>
+                            <ul>
+                                <li class="address">Bobrzyńskiego 29 <br> 30-438 Kraków</li>
+                                <li class="phone"><a href="tel://1234567920">+ 517 751 701</a></li>
+                                <li class="email"><a href="mailto:piotr.puchalaa@gmail.com">piotr.puchalaa@gmail.com</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+
+			<div class="row copyright">
+				<div class="col-md-12 text-center">
+                    <p>
+                        Made by: Piotr Puchała :)
+                    </p>
+					<p>
+						<small class="block">&copy; Template downloaded from: <a href="https://freehtml5.co/">Free HTML5. All Rights Reserved.</a></small>
+					</p>
+					<p>
+						<ul class="fh5co-social-icons">
+							<li><a href="#"><i class="icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon-linkedin"></i></a></li>
+							<li><a href="#"><i class="icon-dribbble"></i></a></li>
+						</ul>
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</footer>
+
+    {% endif %}
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+
+	<!-- jQuery -->
+	<script src="{% static 'website/js/jquery.min.js' %}"></script>
+	<!-- jQuery Easing -->
+	<script src="{% static 'website/js/jquery.easing.1.3.js' %}"></script>
+	<!-- Bootstrap -->
+	<script src="{% static 'website/js/bootstrap.min.js' %}"></script>
+	<!-- Waypoints -->
+	<script src="{% static 'website/js/jquery.waypoints.min.js' %}"></script>
+	<!-- Carousel -->
+	<script src="{% static 'website/js/owl.carousel.min.js' %}"></script>
+	<!-- countTo -->
+	<script src="{% static 'website/js/jquery.countTo.js' %}"></script>
+
+	<!-- Stellar -->
+	<script src="{% static 'website/js/jquery.stellar.min.js' %}"></script>
+	<!-- Magnific Popup -->
+	<script src="{% static 'website/js/jquery.magnific-popup.min.js' %}"></script>
+	<script src="{% static 'website/js/magnific-popup-options.js' %}"></script>
+
+	<!-- // <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script> -->
+	<script src="{% static 'website/js/simplyCountdown.js' %}"></script>
+	<!-- Main -->
+	<script src="{% static 'website/js/main.js' %}"></script>
+
+	<script>
+    var d = new Date("July 17, 2021 14:00:00");
+
+    // default example
+    simplyCountdown('.simply-countdown-one', {
+        year: d.getFullYear(),
+        month: d.getMonth() + 1,
+        day: d.getDate()
+    });
+
+    //jQuery example
+    $('#simply-countdown-losange').simplyCountdown({
+        year: d.getFullYear(),
+        month: d.getMonth() + 1,
+        day: d.getDate(),
+        enableUtc: false
+    });
+
+    $(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+      $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 900, function(){
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+
+      $(window).scroll(function() {
+        $(".slideanim").each(function(){
+          var pos = $(this).offset().top;
+
+          var winTop = $(window).scrollTop();
+            if (pos < winTop + 600) {
+              $(this).addClass("slide");
+            }
+        });
+      });
+    })
+    </script>
+
+	</body>
+</html>
